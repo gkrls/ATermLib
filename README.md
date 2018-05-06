@@ -13,7 +13,7 @@ Then create a `CMakeLists.txt` within that folder with contents :
 - `add_executable(<target_name> ${SOURCES})`
 - `target_link_libraries(<target_name> atermpp)`
 
-After compiling, an executable named `<target_name>` is created under `build/<folder_name>/` 
+After compiling, an executable named `<target_name>` is created under `build/<folder_name>/`
 where `<folder_name>` is the name of the newly created source folder.
 
 ### Compile
@@ -24,3 +24,9 @@ cd build
 cmake ..
 make
 ````
+
+### Documentation
+
+A `Doxyfile` is included in the root directory. Simply run `doxygen` from the root
+directory. A `doc` folder will be created containing the documentation. Can be viewed
+with e.g. `firefox doc/html/index.html`
