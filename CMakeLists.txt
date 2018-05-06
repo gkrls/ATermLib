@@ -3,6 +3,8 @@ project(mCRL2)
 
 enable_testing()
 
+set(CMAKE_CXX_STANDARD 11)
+
 set(MCRL2_MIN_BOOST_VERSION 1.48.0)
 set(MCRL2_VERSION 1.0)
 
