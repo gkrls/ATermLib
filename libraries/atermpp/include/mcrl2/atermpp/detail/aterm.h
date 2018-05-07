@@ -11,12 +11,12 @@
 ///        class to which an aterm points. Each _aterm consists
 ///        of a function symbol, a reference count, used for garbage
 ///        collection and a next pointer used in the hash tables to
-///        locate a term on the basis of the function symbol and 
+///        locate a term on the basis of the function symbol and
 ///        arguments. Each _aterm contains an arbitrary number of
 ///        arguments after m_next, as indicated in the function symbol.
-///        These arguments are not listed explicitly in the class 
+///        These arguments are not listed explicitly in the class
 ///        below, but room is reserved for them when creating this
-///        term. 
+///        term.
 
 #ifndef DETAIL_ATERM_H
 #define DETAIL_ATERM_H
@@ -41,7 +41,8 @@ class _aterm
   protected:
     function_symbol m_function_symbol;
     std::size_t  m_reference_count;
-    _aterm* m_next;
+    _aterm* m_next; /* Next term in the bucket  */
+    /* (Implicit) Arbitrary number of arguments here */
 
   public:
     _aterm()=delete;
@@ -65,24 +66,24 @@ class _aterm
       assert(!reference_count_indicates_is_in_freelist());
       assert(!reference_count_is_zero());
       --m_reference_count;
-    } 
+    }
 
     void increase_reference_count() noexcept
     {
       assert(!reference_count_indicates_is_in_freelist());
       ++m_reference_count;
-    } 
+    }
 
     void reset_reference_count(const bool check=true) noexcept
     {
       if (check) assert(reference_count_indicates_is_in_freelist());
       m_reference_count=0;
-    } 
+    }
 
     bool reference_count_is_zero() const noexcept
     {
       return m_reference_count==0;
-    } 
+    }
 
     std::size_t reference_count() const noexcept
     {
@@ -111,7 +112,7 @@ class _aterm
     }
 };
 
-static const std::size_t TERM_SIZE=sizeof(_aterm)/sizeof(std::size_t);
+static const std::size_t TERM_SIZE = sizeof(_aterm) / sizeof(std::size_t);
 
 detail::_aterm* allocate_term(const std::size_t size);
 void remove_from_hashtable(_aterm *t);
@@ -172,7 +173,7 @@ template <class Term, class Iter, class ATermConverter, class ATermFilter>
 _aterm *make_list_forward(Iter first, Iter last, const ATermConverter& convert_to_aterm, const ATermFilter& aterm_filter);
 
 // Provides the address where the data belonging to this aterm is stored.
-inline _aterm* address(const aterm& t); 
+inline _aterm* address(const aterm& t);
 
 inline std::size_t hash_value_aterm_int(const std::size_t val)
 {
@@ -189,7 +190,7 @@ namespace std
 template<>
 struct hash<atermpp::detail::_aterm*>
 {
-  // Default constructor, required for const qualified hash functions. 
+  // Default constructor, required for const qualified hash functions.
   hash()
   {}
 
