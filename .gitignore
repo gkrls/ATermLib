@@ -1,9 +1,6 @@
 # build folder
 build/
 
-# documentation folder
-doc/
-
 # linter precompiled headers
 *.gch
 

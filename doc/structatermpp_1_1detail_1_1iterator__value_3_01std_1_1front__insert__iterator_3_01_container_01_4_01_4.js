@@ -1,0 +1,4 @@
+var structatermpp_1_1detail_1_1iterator__value_3_01std_1_1front__insert__iterator_3_01_container_01_4_01_4 =
+[
+    [ "type", "structatermpp_1_1detail_1_1iterator__value_3_01std_1_1front__insert__iterator_3_01_container_01_4_01_4.html#accbfc4a2a1e7a15d5ec13063f4c48b77", null ]
+];
