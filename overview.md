@@ -80,7 +80,6 @@ Replace Example:
 <br>
 
 ### ATerm users in mCRL2
-<span id="aterm-users"></span>
 The following libraries/tools make direct use of the ATerm library
 
 [[Core](#core-lib-user)] [[Data](#data-lib-user)]
