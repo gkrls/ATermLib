@@ -48,12 +48,12 @@ Search Example:
   aterm_appl a( read_term_from_string("g( f(x), h(y), f(z))"));
 
   /* Will find the first occurrence of a function symbol f. Will print f(x) */
-  std::cout << find_if( a, if_f()) << std::endl;
+  std::cout << find_if( a, is_function_f()) << std::endl;
 
   vector<atermpp::aterm> v;
 
   /* Will find all occurrences of symbol f and store the function appl(s) in v */
-  find_all_if( a, is_f(), back_inserter(v));
+  find_all_if( a, is_function_f(), back_inserter(v));
   /* Will print f(x) */
   std::cout << v.front() << std::endl;
   /* Will print f(z) */
