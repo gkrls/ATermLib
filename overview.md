@@ -3,7 +3,7 @@
 - [include/mcrl2/atermpp/algorithm.h](#include_mcrl2_atermpp_algorithm_h)
 
 
-<br><br><br>
+<br><br><br><br>
 
 [`source/aterm_io_text.cpp`](doc/aterm__io__text_8cpp.html)<span id="source_aterm_io_text_cpp"></span> Contains mostly the parser for textual ATerms. Example:
 ```c++
@@ -27,10 +27,9 @@ which handles the different cases:
 
   This file also contains functionality for writing textual ATerms to output streams.
 
+<br><br>
 
-
-
-`include/mcrl2/atermpp/algorithm.h`<span id="include_mcrl2_atermpp_algorithm_h"></span> Contains functionality for searching terms an
+[`include/mcrl2/atermpp/algorithm.h`](doc/algorithm_8h.html)<span id="include_mcrl2_atermpp_algorithm_h"></span> Contains functionality for searching terms an
   replacing subterms in a term.
 
 Search Example:
