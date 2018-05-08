@@ -5,7 +5,7 @@
 
 <br><br><br>
 
-`source/aterm_io_text.cpp`<span id="source_aterm_io_text_cpp"></span> Contains mostly the parser for textual ATerms. Example:
+[`source/aterm_io_text.cpp`](doc/aterm__io__text_8cpp.html)<span id="source_aterm_io_text_cpp"></span> Contains mostly the parser for textual ATerms. Example:
 ```c++
   aterm_appl a( read_term_from_string("f(f(x))"));
 ```
