@@ -80,10 +80,13 @@ Replace Example:
 <br>
 
 ### ATerm users in mCRL2
+<span id="aterm-users"></span>
 The following libraries/tools make direct use of the ATerm library
 
+[[Core](#core-lib-user)] [[Data](#data-lib-user)]
+
 #### Libraries
-- Core
+- Core <span id="core-lib-user"></span>
   * `source/core.cpp`
   * `include/mcrl2/core/add_binding.h`
   * `include/mcrl2/core/builder.h`
@@ -98,7 +101,7 @@ The following libraries/tools make direct use of the ATerm library
   * `include/mcrl2/core/detail/soundness_checks.h`
 
   <br>
-- Data
+- Data <span id="data-lib-user"></span>
   * `source/data_specification.cpp`
   * `source/data.cpp`, only in `sort_expression data_expression::sort() const { ...}`
   * `source/typecheck.cpp`

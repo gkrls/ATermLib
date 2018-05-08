@@ -1,6 +1,9 @@
+[[Documentation](https://gkarlos.github.io/ATermLib/doc)]
+[[Overview](https://gkarlos.github.io/ATermLib/overview)]
+[[ATerm users in mCRL2](https://gkarlos.github.io/ATermLib/overview#aterm-users)]
+
+
 ### Links
-- [Documentation](https://gkarlos.github.io/ATermLib/doc)
-- [Overview](https://gkarlos.github.io/ATermLib/overview)
 - [mCRL2](https://www.mcrl2.org/web/user_manual/index.html)
 - [mCRL2 repo](https://github.com/mlaveaux/mCRL2)
 
